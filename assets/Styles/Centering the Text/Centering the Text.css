@@ -1,0 +1,31 @@
+body {
+  background-color: #676771;
+  margin: 0;
+}
+
+.box-container {
+  background-color: #ff2956;
+  /* styles for aligning the element in the center*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box1 {
+  background-color: #4cd964;
+}
+
+.box2 {
+  background-color: #1b89fb;
+}
+
+h1 {
+  color: #ff2956;
+  padding: 10px;
+}
+/*# sourceMappingURL=Centering the Text.css.map */
