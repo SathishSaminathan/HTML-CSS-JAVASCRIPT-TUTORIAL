@@ -1,0 +1,45 @@
+@import "../variables";
+
+body {
+  background-color: $darkGrey;
+}
+
+.container {
+  background-color: $black;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: inline-block;
+    a {
+      display: block;
+      color: $white;
+      padding: 0 20px;
+      font-family: sans-serif;
+      font-weight: lighter;
+      font-size: 25px;
+    }
+    .cool-link::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: $themeRed;
+      transition: width 0.5s;
+    }
+    .cool-link:hover::after {
+      width: 100%;
+      transition: width 0.5s;
+      body {
+        background-color: $themeRed;
+      }
+    }
+  }
+}
