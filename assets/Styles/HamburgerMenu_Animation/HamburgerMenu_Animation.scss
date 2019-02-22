@@ -1,0 +1,48 @@
+@import "../variables";
+
+body {
+    background-color: $violet;
+}
+
+.menuContainer {
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  &:hover {
+    cursor: pointer;
+  }
+  div {
+    height: 8px;
+    background-color: $black;
+    border-radius: 10px;
+    transition: width 0.5s, background-color 0.5s;
+  }
+}
+
+.one {
+  width: 50px;
+  background-color: $black !important;
+}
+.two {
+  width: 35px;
+  background-color: $black !important;
+}
+.three {
+  width: 40px;
+  background-color: $black !important;
+}
+
+.menu:hover {
+  div {
+    width: 50px;
+    background-color: $correctAnswer !important;
+  }
+}
