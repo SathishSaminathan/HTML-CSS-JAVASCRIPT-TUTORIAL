@@ -1,0 +1,39 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  margin: 0px;
+  background-color: #fff;
+  width: calc(100%);
+  height: calc(100%);
+  overflow: hidden;
+}
+
+.glitch-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+}
+
+.title {
+  position: absolute;
+  color: #ffffff;
+  z-index: 10;
+  font-size: 50px;
+  font-weight: bold;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+}
+/*# sourceMappingURL=Image_Glitch.css.map */
