@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="./assets/Styles/Image_Glitch/Image_Glitch.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="./assets/Scripts/mgGlitch.min.js"></script>
+    <script>
+      $(function() {
+        $(".glitch-img").mgGlitch({
+          destroy: false,
+          glitch: true,
+          scale: true,
+          blend: true,
+          blendModeType: "hue",
+          glitch1TimeMin: 200,
+          glitch1TimeMax: 400,
+          glitch2TimeMin: 10,
+          glitch2TimeMax: 100
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="glitch-img"
+        style="background-image:url('./assets/Images/abs_adult_athlete.jpg')"
+      ></div>
+      <!-- <img class="glitch-img" src="glitch.jpg" alt="" /> -->
+    </div>
+    <span class="title">Glitch Effect</span>
+  </body>
+</html>
