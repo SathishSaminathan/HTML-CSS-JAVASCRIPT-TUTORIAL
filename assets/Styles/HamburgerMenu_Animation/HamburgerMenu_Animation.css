@@ -1,0 +1,62 @@
+body {
+  background-color: blueviolet;
+}
+
+.menuContainer {
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 40px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+
+.menu div {
+  height: 8px;
+  background-color: #000000;
+  border-radius: 10px;
+  -webkit-transition: width 0.5s, background-color 0.5s;
+  transition: width 0.5s, background-color 0.5s;
+}
+
+.one {
+  width: 50px;
+  background-color: #000000 !important;
+}
+
+.two {
+  width: 35px;
+  background-color: #000000 !important;
+}
+
+.three {
+  width: 40px;
+  background-color: #000000 !important;
+}
+
+.menu:hover div {
+  width: 50px;
+  background-color: #00e049 !important;
+}
+/*# sourceMappingURL=HamburgerMenu_Animation.css.map */
