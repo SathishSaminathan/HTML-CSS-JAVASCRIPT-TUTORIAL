@@ -1,0 +1,552 @@
+body {
+  margin: 0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.chat-box,
+.msg-box,
+.compose-message-box {
+  width: 250px;
+  position: fixed;
+  bottom: 0px;
+  right: 15px;
+  color: #2c2c54;
+  -webkit-box-shadow: 0 0 4px 0px #2c2c54;
+          box-shadow: 0 0 4px 0px #2c2c54;
+  border-radius: 2px 2px 0px 0px;
+  overflow: hidden;
+}
+
+.chat-box .chat-head,
+.chat-box .msg-head,
+.chat-box .compose-message-head,
+.msg-box .chat-head,
+.msg-box .msg-head,
+.msg-box .compose-message-head,
+.compose-message-box .chat-head,
+.compose-message-box .msg-head,
+.compose-message-box .compose-message-head {
+  cursor: pointer;
+  height: 40px;
+  background-color: white;
+  border-bottom: 1px solid #2c2c541c;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2c2c54;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 15px;
+}
+
+.chat-box .chat-head .compose-message,
+.chat-box .msg-head .compose-message,
+.chat-box .compose-message-head .compose-message,
+.msg-box .chat-head .compose-message,
+.msg-box .msg-head .compose-message,
+.msg-box .compose-message-head .compose-message,
+.compose-message-box .chat-head .compose-message,
+.compose-message-box .msg-head .compose-message,
+.compose-message-box .compose-message-head .compose-message {
+  font-weight: bold;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chat-box .chat-head .compose-message:hover,
+.chat-box .msg-head .compose-message:hover,
+.chat-box .compose-message-head .compose-message:hover,
+.msg-box .chat-head .compose-message:hover,
+.msg-box .msg-head .compose-message:hover,
+.msg-box .compose-message-head .compose-message:hover,
+.compose-message-box .chat-head .compose-message:hover,
+.compose-message-box .msg-head .compose-message:hover,
+.compose-message-box .compose-message-head .compose-message:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+  font-weight: bold;
+}
+
+.chat-box .chat-head .user-name-area .user-name,
+.chat-box .msg-head .user-name-area .user-name,
+.chat-box .compose-message-head .user-name-area .user-name,
+.msg-box .chat-head .user-name-area .user-name,
+.msg-box .msg-head .user-name-area .user-name,
+.msg-box .compose-message-head .user-name-area .user-name,
+.compose-message-box .chat-head .user-name-area .user-name,
+.compose-message-box .msg-head .user-name-area .user-name,
+.compose-message-box .compose-message-head .user-name-area .user-name {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.chat-box .chat-head .user-name-area .user-name:hover,
+.chat-box .msg-head .user-name-area .user-name:hover,
+.chat-box .compose-message-head .user-name-area .user-name:hover,
+.msg-box .chat-head .user-name-area .user-name:hover,
+.msg-box .msg-head .user-name-area .user-name:hover,
+.msg-box .compose-message-head .user-name-area .user-name:hover,
+.compose-message-box .chat-head .user-name-area .user-name:hover,
+.compose-message-box .msg-head .user-name-area .user-name:hover,
+.compose-message-box .compose-message-head .user-name-area .user-name:hover {
+  text-decoration: underline;
+  color: #0073b1;
+}
+
+.chat-box .chat-head .user-name-area .is-online-area,
+.chat-box .msg-head .user-name-area .is-online-area,
+.chat-box .compose-message-head .user-name-area .is-online-area,
+.msg-box .chat-head .user-name-area .is-online-area,
+.msg-box .msg-head .user-name-area .is-online-area,
+.msg-box .compose-message-head .user-name-area .is-online-area,
+.compose-message-box .chat-head .user-name-area .is-online-area,
+.compose-message-box .msg-head .user-name-area .is-online-area,
+.compose-message-box .compose-message-head .user-name-area .is-online-area {
+  font-size: 12px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chat-box .chat-head .user-name-area .is-online-area .is-online,
+.chat-box .msg-head .user-name-area .is-online-area .is-online,
+.chat-box .compose-message-head .user-name-area .is-online-area .is-online,
+.msg-box .chat-head .user-name-area .is-online-area .is-online,
+.msg-box .msg-head .user-name-area .is-online-area .is-online,
+.msg-box .compose-message-head .user-name-area .is-online-area .is-online,
+.compose-message-box .chat-head .user-name-area .is-online-area .is-online,
+.compose-message-box .msg-head .user-name-area .is-online-area .is-online,
+.compose-message-box .compose-message-head .user-name-area .is-online-area .is-online {
+  position: relative;
+  padding: 0 15px;
+}
+
+.chat-box .chat-head .user-name-area .is-online-area .is-online::before,
+.chat-box .msg-head .user-name-area .is-online-area .is-online::before,
+.chat-box .compose-message-head .user-name-area .is-online-area .is-online::before,
+.msg-box .chat-head .user-name-area .is-online-area .is-online::before,
+.msg-box .msg-head .user-name-area .is-online-area .is-online::before,
+.msg-box .compose-message-head .user-name-area .is-online-area .is-online::before,
+.compose-message-box .chat-head .user-name-area .is-online-area .is-online::before,
+.compose-message-box .msg-head .user-name-area .is-online-area .is-online::before,
+.compose-message-box .compose-message-head .user-name-area .is-online-area .is-online::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #469a1f;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 5px;
+}
+
+.chat-box .chat-head .user-name-area .is-online-area .last-seen,
+.chat-box .msg-head .user-name-area .is-online-area .last-seen,
+.chat-box .compose-message-head .user-name-area .is-online-area .last-seen,
+.msg-box .chat-head .user-name-area .is-online-area .last-seen,
+.msg-box .msg-head .user-name-area .is-online-area .last-seen,
+.msg-box .compose-message-head .user-name-area .is-online-area .last-seen,
+.compose-message-box .chat-head .user-name-area .is-online-area .last-seen,
+.compose-message-box .msg-head .user-name-area .is-online-area .last-seen,
+.compose-message-box .compose-message-head .user-name-area .is-online-area .last-seen {
+  position: relative;
+  padding-left: 13px;
+}
+
+.chat-box .chat-head .user-name-area .is-online-area .last-seen::before,
+.chat-box .msg-head .user-name-area .is-online-area .last-seen::before,
+.chat-box .compose-message-head .user-name-area .is-online-area .last-seen::before,
+.msg-box .chat-head .user-name-area .is-online-area .last-seen::before,
+.msg-box .msg-head .user-name-area .is-online-area .last-seen::before,
+.msg-box .compose-message-head .user-name-area .is-online-area .last-seen::before,
+.compose-message-box .chat-head .user-name-area .is-online-area .last-seen::before,
+.compose-message-box .msg-head .user-name-area .is-online-area .last-seen::before,
+.compose-message-box .compose-message-head .user-name-area .is-online-area .last-seen::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 8px;
+}
+
+.chat-box .chat-body,
+.msg-box .chat-body,
+.compose-message-box .chat-body {
+  height: 400px;
+}
+
+.chat-box .chat-body .user-search-area,
+.msg-box .chat-body .user-search-area,
+.compose-message-box .chat-body .user-search-area {
+  height: 50px;
+  background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat-box .chat-body .user-search-area .search-icon,
+.msg-box .chat-body .user-search-area .search-icon,
+.compose-message-box .chat-body .user-search-area .search-icon {
+  position: absolute;
+  left: 32px;
+  font-size: 12px;
+}
+
+.chat-box .chat-body .user-search-area .input-area input,
+.msg-box .chat-body .user-search-area .input-area input,
+.compose-message-box .chat-body .user-search-area .input-area input {
+  padding-left: 32px;
+  line-height: 1.42857;
+  font-weight: 400;
+  -webkit-transition-duration: 334ms;
+          transition-duration: 334ms;
+  -webkit-transition-property: border-color, -webkit-box-shadow;
+  transition-property: border-color, -webkit-box-shadow;
+  transition-property: border-color, box-shadow;
+  transition-property: border-color, box-shadow, -webkit-box-shadow;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  outline: 0;
+  height: 25px;
+  color: rgba(0, 0, 0, 0.9);
+  background-color: #fff;
+  font-size: 15px;
+}
+
+.chat-box .chat-body .user-search-area .input-area input:focus,
+.msg-box .chat-body .user-search-area .input-area input:focus,
+.compose-message-box .chat-body .user-search-area .input-area input:focus {
+  -webkit-box-shadow: 0 0 0 1px #0073b1;
+          box-shadow: 0 0 0 1px #0073b1;
+  border-color: #0073b1;
+}
+
+.chat-box .chat-body .contact-area,
+.msg-box .chat-body .contact-area,
+.compose-message-box .chat-body .contact-area {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.chat-box .chat-body .user,
+.msg-box .chat-body .user,
+.compose-message-box .chat-body .user {
+  padding: 10px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat-box .chat-body .user:hover,
+.msg-box .chat-body .user:hover,
+.compose-message-box .chat-body .user:hover {
+  background-color: #3498db12;
+  cursor: pointer;
+}
+
+.chat-box .chat-body .user .profile-image-area,
+.msg-box .chat-body .user .profile-image-area,
+.compose-message-box .chat-body .user .profile-image-area {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.chat-box .chat-body .user .profile-image-area img,
+.msg-box .chat-body .user .profile-image-area img,
+.compose-message-box .chat-body .user .profile-image-area img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.chat-box .chat-body .user .profile-image-area .user-online,
+.msg-box .chat-body .user .profile-image-area .user-online,
+.compose-message-box .chat-body .user .profile-image-area .user-online {
+  width: 9px;
+  height: 9px;
+  background-color: #469a1f;
+  position: absolute;
+  border-radius: 50%;
+  right: 0px;
+  border: 2px solid white;
+  bottom: 0px;
+}
+
+.chat-box .chat-body .user .user-name-message,
+.msg-box .chat-body .user .user-name-message,
+.compose-message-box .chat-body .user .user-name-message {
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 4px;
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 400;
+}
+
+.chat-box .chat-body .user .user-name-message .user-name,
+.msg-box .chat-body .user .user-name-message .user-name,
+.compose-message-box .chat-body .user .user-name-message .user-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 180px;
+  display: block;
+}
+
+.chat-box .chat-body .user .user-name-message .message,
+.msg-box .chat-body .user .user-name-message .message,
+.compose-message-box .chat-body .user .user-name-message .message {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chat-box .chat-body .user .user-name-message .message .sender::after,
+.msg-box .chat-body .user .user-name-message .message .sender::after,
+.compose-message-box .chat-body .user .user-name-message .message .sender::after {
+  content: ":";
+}
+
+.chat-box .chat-body .user .user-name-message .message .sent-message,
+.msg-box .chat-body .user .user-name-message .message .sent-message,
+.compose-message-box .chat-body .user .user-name-message .message .sent-message {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 180px;
+  display: block;
+  padding-left: 3px;
+}
+
+.msg-box {
+  width: 336px;
+  background-color: white;
+  right: 280px;
+}
+
+.msg-box .msg-body {
+  height: 160px;
+  overflow-y: auto;
+}
+
+.msg-box .msg-body .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.msg-box .msg-body .message .msg-avatar-area .msg-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.msg-box .msg-body .message .msg-content-area {
+  padding-left: 12px;
+}
+
+.msg-box .msg-body .message .msg-content-area .profile-name-and-sent-time .profile-name {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.msg-box .msg-body .message .msg-content-area .profile-name-and-sent-time .profile-name:hover {
+  text-decoration: underline;
+  color: #0073b1;
+}
+
+.msg-box .msg-body .message .msg-content-area .profile-name-and-sent-time .message-sent-time {
+  position: relative;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 10px;
+}
+
+.msg-box .msg-body .message .msg-content-area .profile-name-and-sent-time .message-sent-time::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 7px;
+}
+
+.msg-box .msg-body .message .msg-content-area .message-content {
+  display: block;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+}
+
+.msg-box .msg-body .own-message .msg-avatar-area .msg-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.msg-input,
+.compose-message-input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: auto;
+  resize: none;
+  outline: none;
+  height: 50px;
+  border: 0;
+  border-top: 2px solid #0073b1;
+  padding: 12px;
+  max-height: 150px;
+  font-size: 14px !important;
+  -webkit-transition: height 0.2s ease;
+}
+
+.msg-input:focus,
+.compose-message-input:focus {
+  height: 100px !important;
+}
+
+.compose-message-box {
+  width: 336px;
+  background-color: white;
+  right: 632px;
+}
+
+.compose-message-box .compose-message-head {
+  border: 0;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body .search-area {
+  width: 100%;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body .search-area .search-input {
+  width: 100%;
+  padding: 10px 0;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #2c2c541c;
+  border-top: 1px solid #2c2c541c;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body .search-result-area {
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body .search-result-area .compose-message-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body .search-result-area .compose-message-user:hover {
+  background-color: #3498db12;
+  cursor: pointer;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body .search-result-area .compose-message-user .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body .search-result-area .compose-message-user .name-position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5px;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body .search-result-area .compose-message-user .name-position .name,
+.compose-message-box .compose-message-wrap .compose-message-body .search-result-area .compose-message-user .name-position .position {
+  font-size: 14px;
+  line-height: 1.42857;
+  font-weight: 500;
+  width: 275px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.compose-message-box .compose-message-wrap .compose-message-body .search-result-area .compose-message-user .name-position .position {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.close-button,
+.compose-message-close-button {
+  cursor: pointer;
+}
+
+.close-button:hover,
+.compose-message-close-button:hover {
+  color: tomato;
+}
+/*# sourceMappingURL=FaceBookLikeChatDesign.css.map */

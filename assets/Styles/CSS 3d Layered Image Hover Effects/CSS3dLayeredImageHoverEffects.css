@@ -27,8 +27,8 @@ body {
 
 .container img {
   position: absolute;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: .7s;
+  transition: .7s;
   width: 100%;
 }
 
