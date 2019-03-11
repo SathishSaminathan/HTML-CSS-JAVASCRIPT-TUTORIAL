@@ -1,0 +1,169 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Gotham A", "Gotham B", sans-serif;
+}
+
+.loader {
+  position: relative;
+  color: #000;
+  background-color: #fff;
+}
+
+.loader span {
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-color: black;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  max-width: 1680px;
+  margin: 0 auto;
+  color: black;
+  background-color: #fff;
+}
+
+.nav-bar .menu-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%) translateY(-50%);
+          transform: translate(-50%) translateY(-50%);
+}
+
+.nav-bar .menu-area .menu {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+}
+
+.nav-bar .menu-area .menu .menu-item {
+  position: relative;
+  background: #fff;
+  color: #000;
+  display: inline-block;
+}
+
+.nav-bar .menu-area .menu .menu-item .menu-link {
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.nav-bar .menu-area .menu .menu-item:hover:before {
+  width: 100%;
+}
+
+.nav-bar .menu-area .menu .menu-item:before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  background-color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 55px;
+  position: fixed;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header .logo-text {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.header .menu-text {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .menu-bars {
+  font-size: 35px;
+  padding-left: 15px;
+}
+
+section {
+  height: 100vh;
+}
+
+.sec1 {
+  background-image: url("../../Images/a.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sec2 {
+  background-image: url("../../Images/b.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sec3 {
+  background-image: url("../../Images/c.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sec4 {
+  background-image: url("../../Images/d.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sec5 {
+  background-image: url("../../Images/e.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+/*# sourceMappingURL=Fixed Background effect.css.map */
