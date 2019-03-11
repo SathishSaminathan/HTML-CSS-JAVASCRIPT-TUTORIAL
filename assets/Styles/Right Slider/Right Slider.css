@@ -1,0 +1,322 @@
+@charset "UTF-8";
+body {
+  background-color: #f8f8f8;
+  margin: 0;
+  font-family: "ROBOTO";
+}
+
+.setting-area {
+  position: fixed;
+  right: 0;
+}
+
+.setting-area .settings-icon {
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 20px;
+}
+
+.setting-area .settings {
+  position: absolute;
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  top: 0;
+  right: -300px;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.setting-area .settings .header {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #f8f8f8;
+}
+
+.setting-area .settings .header .header-name .icon {
+  font-size: 16px;
+}
+
+.setting-area .settings .header .header-name .name {
+  font-size: 16px;
+}
+
+.setting-area .settings .header .close-btn {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.setting-area .settings .discoverable {
+  padding: 10px 0 10px 0;
+}
+
+.setting-area .settings .discoverable .my-location-sharing {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.setting-area .settings .discoverable .my-location-sharing span {
+  font-size: 14px;
+}
+
+.setting-area .settings .discoverable .my-location-sharing .switch {
+  cursor: pointer;
+  position: relative;
+  width: 45px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  border: 2px solid #ededed;
+}
+
+.setting-area .settings .discoverable .my-location-sharing .switch::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  left: 1px;
+  border-radius: 50%;
+  background-color: #ff9f43;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.setting-area .settings .discoverable .my-location-sharing .switch.active-btn::before {
+  left: 26px;
+}
+
+.setting-area .settings .discoverable .people-within {
+  padding: 15px;
+}
+
+.setting-area .settings .discoverable .people-within span {
+  font-size: 14px;
+}
+
+.setting-area .settings .discoverable .people-within .range-area {
+  padding: 30px 10px 0 10px;
+}
+
+.setting-area .settings .discoverable .people-within input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  background-color: #bdc3c7;
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+}
+
+.setting-area .settings .discoverable .people-within input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ededed;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.setting-area .settings .discoverable .people-within ​ input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: white;
+  border: 2px solid #e74c3c;
+}
+
+.setting-area .settings.active {
+  right: 0;
+}
+
+.setting-area .settings .payment {
+  padding: 10px 0 10px 0;
+}
+
+.setting-area .settings .payment .add-rewards {
+  padding: 15px;
+}
+
+.setting-area .settings .payment .add-rewards span {
+  font-size: 14px;
+}
+
+.setting-area .settings .payment .add-rewards .account-area {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.setting-area .settings .payment .add-rewards .account-area .image-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.setting-area .settings .payment .add-rewards .account-area .image-input .account-image {
+  width: 20px;
+  height: 20px;
+}
+
+.setting-area .settings .payment .add-rewards .account-area .image-input .input {
+  outline: 0;
+  border: 0;
+  padding-left: 10px;
+  color: 12px;
+  font-weight: bold;
+}
+
+.setting-area .settings .payment .add-rewards .account-area .edit {
+  font-size: 14px;
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.setting-area .settings .payment .add-rewards .add-payment-method {
+  font-size: 14px;
+  color: #e74c3c;
+  display: block;
+  padding: 10px 0;
+}
+
+.setting-area .settings .account {
+  padding: 10px 0 10px 0;
+}
+
+.setting-area .settings .account .my-linked-acc {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.setting-area .settings .account .my-linked-acc span {
+  font-size: 14px;
+}
+
+.setting-area .settings .account .my-linked-acc .mails {
+  padding: 5px;
+}
+
+.setting-area .settings .account .my-linked-acc .account-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+.setting-area .settings .account .my-linked-acc .account-area .account-img {
+  width: 15px;
+  height: 15px;
+}
+
+.setting-area .settings .account .my-linked-acc .account-area .mail {
+  padding-left: 10px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.setting-area .settings .account .my-linked-acc .link-more,
+.setting-area .settings .account .my-linked-acc .change-password {
+  font-size: 14px;
+  color: #e74c3c;
+}
+
+.setting-area .settings .account .my-linked-acc .change-password {
+  padding-top: 10px;
+}
+
+.setting-area .settings .logout-area {
+  position: absolute;
+  bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.setting-area .settings .logout-area .logout,
+.setting-area .settings .logout-area .deactivate {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.setting-area .settings .logout-area .deactivate {
+  color: #e74c3c;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  width: 70%;
+  height: 30px;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #f8f8f8;
+  background-color: #80808029;
+  outline: 0;
+}
+/*# sourceMappingURL=Right Slider.css.map */
