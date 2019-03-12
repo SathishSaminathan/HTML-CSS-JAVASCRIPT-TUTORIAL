@@ -17,7 +17,8 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
-    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./assets/Scripts/slidemenu.js"></script>
   </head>
   <body>
     <!-- <div class="loader"><span>Loading</span></div> -->
@@ -68,10 +69,14 @@
     <div class="header">
       <div class="logo-text">Grad X</div>
       <div class="menu-text">
-        <span>Menu</span><i class="fas fa-bars menu-bars"></i>
+        <span class="menu-value" data-text="Close">Menu</span>
+        <!-- <i class="fa fa-bars menu-bars"></i> -->
+        <div class="nav-icon">
+          <div></div>
+        </div>
       </div>
     </div>
-    <div>
+    <div class="section-area">
       <section class="sec1"><div>Hai</div></section>
       <section class="sec2"></section>
       <section class="sec3"></section>

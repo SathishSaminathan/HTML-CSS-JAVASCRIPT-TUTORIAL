@@ -26,15 +26,21 @@ body {
 
 .nav-bar {
   position: fixed;
-  top: 0;
+  top: -100vh;
   width: 100%;
   height: 100vh;
   max-width: 1680px;
   margin: 0 auto;
   color: black;
-  background-color: #fff;
+  background-color: #000;
+  transition: 0.5s ease-in;
   // // background-color: #082b3e;
   // z-index: 1;
+  &.active {
+    top: 0;
+    background-color: #fff;
+    // animation: animate .5s linear;
+  }
   .menu-area {
     position: absolute;
     top: 50%;
@@ -72,7 +78,7 @@ body {
           &:before {
             width: 100%;
           }
-        }        
+        }
         &:before {
           content: "";
           position: absolute;
@@ -100,14 +106,54 @@ body {
     letter-spacing: 3px;
   }
   .menu-text {
+    cursor: pointer;
+    width: 180px;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 3px;
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      .nav-icon {
+        &::after,
+        &::before,
+        div {
+          background-color: #80f5bb;
+        }
+      }
+      color: #80f5bb;
+    }
+    .nav-icon {
+      margin: 1em;
+      width: 40px;
+      &.active {
+        &::before {
+          transform: translateY(12px) rotate(135deg);
+        }
+        &::after {
+          transform: translateY(-12px) rotate(-135deg);
+        }
+        div {
+          transform: scale(0);
+        }
+      }
+      &::after,
+      &::before,
+      div {
+        background-color: #000;
+        border-radius: 3px;
+        content: "";
+        display: block;
+        height: 5px;
+        margin: 7px 0;
+        transition: all 0.3s ease-in-out;
+      }
+    }
   }
   .menu-bars {
+    cursor: pointer;
     font-size: 35px;
     padding-left: 15px;
   }
@@ -141,4 +187,24 @@ section {
   background-image: url("../../Images/e.jpg");
   background-size: cover;
   background-attachment: fixed;
+}
+
+@keyframes animate {
+  //   0%{
+  //  height: 100vh;
+  //   }
+  //   30%{
+  //     height: 90vh;
+  //     transform: scale(.9)
+  //   }
+  //   100%{
+  //     height: 100vh;
+  //   }
+  // 0%{
+  //   top: -100vh;
+  //    }
+
+  //    100%{
+  //      top: 0;
+  //    }
 }

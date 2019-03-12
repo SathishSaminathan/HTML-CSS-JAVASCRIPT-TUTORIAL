@@ -28,12 +28,19 @@ body {
 
 .nav-bar {
   position: fixed;
-  top: 0;
+  top: -100vh;
   width: 100%;
   height: 100vh;
   max-width: 1680px;
   margin: 0 auto;
   color: black;
+  background-color: #000;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.nav-bar.active {
+  top: 0;
   background-color: #fff;
 }
 
@@ -116,6 +123,8 @@ body {
 }
 
 .header .menu-text {
+  cursor: pointer;
+  width: 180px;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 3px;
@@ -126,9 +135,53 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .menu-text:hover {
+  color: #80f5bb;
+}
+
+.header .menu-text:hover .nav-icon::after, .header .menu-text:hover .nav-icon::before,
+.header .menu-text:hover .nav-icon div {
+  background-color: #80f5bb;
+}
+
+.header .menu-text .nav-icon {
+  margin: 1em;
+  width: 40px;
+}
+
+.header .menu-text .nav-icon.active::before {
+  -webkit-transform: translateY(12px) rotate(135deg);
+          transform: translateY(12px) rotate(135deg);
+}
+
+.header .menu-text .nav-icon.active::after {
+  -webkit-transform: translateY(-12px) rotate(-135deg);
+          transform: translateY(-12px) rotate(-135deg);
+}
+
+.header .menu-text .nav-icon.active div {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.header .menu-text .nav-icon::after, .header .menu-text .nav-icon::before,
+.header .menu-text .nav-icon div {
+  background-color: #000;
+  border-radius: 3px;
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .header .menu-bars {
+  cursor: pointer;
   font-size: 35px;
   padding-left: 15px;
 }
@@ -166,4 +219,8 @@ section {
   background-size: cover;
   background-attachment: fixed;
 }
+
+@-webkit-keyframes animate {}
+
+@keyframes animate {}
 /*# sourceMappingURL=Fixed Background effect.css.map */
