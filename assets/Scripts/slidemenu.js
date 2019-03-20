@@ -7,15 +7,15 @@ $(document).ready(function() {
       $(".c-loader").css("width", count + "%");
       count++;
     } else {
-      $('.counter-loader').fadeOut(1500);
+      $(".counter-loader").fadeOut(1500);
       $(".section-area").show();
       clearInterval(counter);
     }
-  }, 35);
+  }, 20);
   $(".nav-icon").click(function() {
     $(".nav-bar").toggleClass("active");
     $(".nav-icon").toggleClass("active");
-    $('.section-area').fadeToggle(500);
+    $(".section-area").fadeToggle(500);
     var oldText = $(".menu-value").text();
     var newText = $(".menu-value").data("text");
     $(".menu-value")
