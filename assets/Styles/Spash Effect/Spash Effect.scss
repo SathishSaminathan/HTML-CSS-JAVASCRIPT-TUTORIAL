@@ -1,0 +1,92 @@
+body {
+  //   background-color: blueviolet;
+  font-family: "ROBOTO"
+}
+
+.text-anim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: z-index .2s;
+  .text{
+      position: relative;
+      font-size: 100px;
+      color: white;
+      -webkit-text-stroke: 2px black;
+      &::before{
+          content: attr(data-text);
+          position: absolute;
+          left: 0;
+          width: 0%;
+          color: red;
+          transition: .2s;
+          overflow: hidden;
+      }
+      &:hover{
+        &::before{
+            width: 100%;            
+        }
+      }
+  }
+}
+
+.menu-container {
+  width: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1px;
+  .menu {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: .5s;
+    div {
+      height: 5px;
+      width: 40px;
+      background-color: black;
+      border-radius: 10px;
+      position: relative;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    &::before {
+      content: "";
+      height: 5px;
+      width: 40px;
+      background-color: black;
+      border-radius: 10px;
+      position: absolute;
+      top: 10px;
+      transition: 0.5s;
+    }
+    &::after {
+      content: "";
+      height: 5px;
+      width: 40px;
+      background-color: black;
+      border-radius: 10px;
+      position: absolute;
+      top: 20px;
+      transition: 0.5s;
+    }
+    &.active {
+      box-shadow: 0 0 0 2000px blueviolet;
+      background-color: blueviolet;
+      div {
+        opacity: 0;
+      }
+      &::before {
+        transform: rotate(50deg);
+        top: 10px;
+      }
+      &::after {
+        transform: rotate(-50deg);
+        top: 10px;
+      }
+    }
+  }
+}
