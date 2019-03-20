@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Spash Effect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./assets/Styles/Spash Effect/Spash Effect.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.menu-container').click(function(){
+                $('.menu').toggleClass('active')
+                $('.text-anim').css('z-index',-1)
+            })
+        })
+    </script>
+  </head>
+  <body>
+    <div class="menu-container">
+      <div class="menu"><div></div></div>
+    </div>
+    <div class="text-anim">
+        <span class="text" data-text="Sathish">Sathish</span>
+    </div>
+  </body>
+</html>
