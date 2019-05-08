@@ -1,0 +1,31 @@
+body {
+  background-color: #73d9f0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body .cloud {
+  position: absolute;
+  -webkit-animation: cloud_movement 10s linear infinite;
+          animation: cloud_movement 10s linear infinite;
+}
+
+@-webkit-keyframes cloud_movement {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes cloud_movement {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+/*# sourceMappingURL=Cloud_Movement.css.map */
