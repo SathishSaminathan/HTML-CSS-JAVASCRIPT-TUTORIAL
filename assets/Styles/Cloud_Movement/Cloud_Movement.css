@@ -6,9 +6,60 @@ body {
 }
 
 body .cloud {
+  width: 1000px;
+  height: 1000px;
   position: absolute;
+  right: 120%;
+  -webkit-filter: drop-shadow(70px 3px 22px #222);
+          filter: drop-shadow(70px 3px 22px #222);
   -webkit-animation: cloud_movement 10s linear infinite;
           animation: cloud_movement 10s linear infinite;
+}
+
+body .cloud:nth-child(2) {
+  width: 500px;
+  height: 500px;
+  top: 20%;
+  -webkit-animation: cloud_movement 12s linear infinite;
+          animation: cloud_movement 12s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+body .cloud:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  -webkit-filter: drop-shadow(20px 3px 10px #222);
+          filter: drop-shadow(20px 3px 10px #222);
+  top: 20%;
+  -webkit-animation: cloud_movement 20s linear infinite;
+          animation: cloud_movement 20s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+body .cloud:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  -webkit-filter: drop-shadow(20px 3px 10px #222);
+          filter: drop-shadow(20px 3px 10px #222);
+  top: 0;
+  -webkit-animation: cloud_movement 16s linear infinite;
+          animation: cloud_movement 16s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+body .cloud:nth-child(5) {
+  width: 100px;
+  height: 100px;
+  -webkit-filter: drop-shadow(20px 3px 10px #222);
+          filter: drop-shadow(20px 3px 10px #222);
+  bottom: 0;
+  -webkit-animation: cloud_movement 22s linear infinite;
+          animation: cloud_movement 22s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 @-webkit-keyframes cloud_movement {
