@@ -5,6 +5,54 @@ body {
   overflow: hidden;
 }
 
+body .photo {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 5px solid black;
+  -webkit-box-shadow: 0 0 20px 4px lightslategrey;
+          box-shadow: 0 0 20px 4px lightslategrey;
+  -webkit-animation: swing_photo 1s infinite ease-in-out alternate;
+          animation: swing_photo 1s infinite ease-in-out alternate;
+  -webkit-transform-origin: center -40px;
+          transform-origin: center -40px;
+}
+
+body .photo img {
+  width: 300px;
+  height: 300px;
+}
+
+body .photo::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  border: 2px solid black;
+  position: absolute;
+  top: -22px;
+  border-right: none;
+  border-bottom: none;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 140px;
+}
+
+body .photo::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: -60px;
+  left: 140px;
+  border-radius: 50%;
+  border: 3px solid darkslategray;
+}
+
 body .cloud {
   width: 1000px;
   height: 1000px;
@@ -77,6 +125,28 @@ body .cloud:nth-child(5) {
   }
   100% {
     right: 100%;
+  }
+}
+
+@-webkit-keyframes swing_photo {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes swing_photo {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
   }
 }
 /*# sourceMappingURL=Cloud_Movement.css.map */
